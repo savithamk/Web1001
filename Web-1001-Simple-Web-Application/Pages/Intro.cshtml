@@ -7,3 +7,27 @@
 
 
 <h3>Savitha Maiya Keshava</h3>
+<section class="custom-class">
+
+    <form>
+        <div class="mb-2">
+            <label class="form-label" for="firstNumber">First Number</label>
+            <input class="form-control" type="number" asp-for="First_Number" id="firstNumber" onkeyup="updateOutput()" />
+        </div>
+        <div class="mb-2">
+            <label class="form-label" for="secondNumber">Second Number</label>
+            <input class="form-control" type="number" asp-for="Second_Number" id="secondNumber" onkeyup="updateOutput()" />
+        </div>
+        <div class="mb-2">
+            <label class="form-label" for="output">Output</label>
+            <input class="form-control" type="number" asp-for="Output" id="output" readonly />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</section>
+
+<script>function updateOutput() {
+        var firstNumber = document.getElementById("firstNumber").value;
+        var secondNumber = document.getElementById("secondNumber").value;
+        document.getElementById("output").value = parseInt(firstNumber)+parseInt(secondNumber);
+    }</script>
