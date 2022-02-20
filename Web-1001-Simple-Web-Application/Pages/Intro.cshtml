@@ -18,17 +18,21 @@
             <input class="form-control" type="number" asp-for="Second_Number" id="secondNumber" onkeyup="updateOutput()" />
         </div>
         <div class="mb-2">
-            <label class="form-label" for="output">Output</label>
+            <label class="form-label" for="output">Output (First Number + Second Number)</label>
             <input class="form-control" type="number" asp-for="Output" id="output" readonly />
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </section>
 
-<script>
-    function updateOutput() {
+@section About{
+    <div class="container">
+            <p>This is the section created for this page.</p>
+    </div>
+}
+
+<script>function updateOutput() {
         var firstNumber = document.getElementById("firstNumber").value;
         var secondNumber = document.getElementById("secondNumber").value;
-        document.getElementById("output").value = parseInt(firstNumber)+parseInt(secondNumber);
-    }
-</script>
+        document.getElementById("output").value = parseInt(firstNumber) + parseInt(secondNumber);
+    }</script>
